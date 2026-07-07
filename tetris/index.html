@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris — 俄罗斯方块</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <!-- Hold piece panel -->
+    <div id="hold-panel" class="side-panel">
+      <div class="panel-label">HOLD</div>
+      <canvas id="hold-canvas" width="120" height="90"></canvas>
+    </div>
+
+    <!-- Main board -->
+    <div id="board-wrapper">
+      <canvas id="game-canvas" width="300" height="600"></canvas>
+    </div>
+
+    <!-- Next pieces panel -->
+    <div id="next-panel" class="side-panel">
+      <div class="panel-label">NEXT</div>
+      <canvas id="next-canvas" width="120" height="300"></canvas>
+    </div>
+
+    <!-- Score panel (right) -->
+    <div id="score-panel" class="side-panel">
+      <div class="panel-label">SCORE</div>
+      <div id="score-display">0</div>
+      <div class="panel-label" style="margin-top:16px">LINES</div>
+      <div id="lines-display">0</div>
+      <div class="panel-label" style="margin-top:16px">LEVEL</div>
+      <div id="level-display">1</div>
+      <div class="panel-label" style="margin-top:16px">HIGH</div>
+      <div id="high-display">0</div>
+    </div>
+  </div>
+
+  <!-- Overlay for menu/pause/game-over -->
+  <div id="overlay">
+    <div id="overlay-content">
+      <h1 id="overlay-title">TETRIS</h1>
+      <p id="overlay-message"></p>
+      <div id="controls-help">
+        <p>← → 移动 &nbsp;&nbsp; ↑ 旋转</p>
+        <p>↓ 加速下落 &nbsp;&nbsp; Space 硬降</p>
+        <p>C 暂存 &nbsp;&nbsp; P 暂停</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
